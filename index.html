@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Naruto Fan Universe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
+  <title>Naruto Shinobi Realm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- NAVBAR WITH GLOWING LOGO -->
   <nav class="main-nav">
-    <div class="logo">
-      <img src="https://seeklogo.com/images/N/naruto-logo-7F8B35B18B-seeklogo.com.png" alt="Naruto Logo" />
+    <div class="logo-wrap">
+      <div class="chakra-glow"></div>
+      <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Leaf_village_logo.svg" alt="Konoha" />
+      <span class="site-name">Shinobi Realm</span>
     </div>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -20,16 +23,48 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
+  <!-- PARALLAX HERO WITH CHAKRA AND ANIMATED SHURIKEN -->
   <header class="hero-section">
     <div class="parallax-bg"></div>
     <div class="hero-content">
-      <h1 class="naruto-title">Welcome to Naruto Universe</h1>
-      <p class="naruto-tagline">Ultimate Naruto destination for all ninja fans! Latest info, images, and more. Believe it!</p>
-      <a class="cta-btn" href="characters.html">Explore Characters</a>
+      <h1 class="title">The Ultimate Naruto Shinobi Portal</h1>
+      <p class="tagline">
+        Enter the world of chakra, shinobi legends, and stunning ninja visuals.
+      </p>
+      <a class="chakra-btn" href="characters.html">Meet the Shinobi</a>
     </div>
+    <img src="https://pngimg.com/d/shuriken_PNG29.png" class="shuriken" alt="Spinning Shuriken" />
   </header>
+
+  <main>
+    <!-- CHARACTER PREVIEW CARDS: FADE/ZOOM ON LOAD -->
+    <section class="character-preview">
+      <h2>Main Characters</h2>
+      <div class="char-grid">
+        <div class="char-card">
+          <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Naruto_Uzumaki_part_II.png" alt="Naruto Uzumaki" />
+          <h3>Naruto Uzumaki</h3>
+        </div>
+        <div class="char-card">
+          <img src="https://static.wikia.nocookie.net/naruto/images/7/79/Sasuke_Uchiha_Part_II.png" alt="Sasuke Uchiha" />
+          <h3>Sasuke Uchiha</h3>
+        </div>
+        <div class="char-card">
+          <img src="https://static.wikia.nocookie.net/naruto/images/9/99/Sakura_Part_II.png" alt="Sakura Haruno" />
+          <h3>Sakura Haruno</h3>
+        </div>
+        <div class="char-card">
+          <img src="https://static.wikia.nocookie.net/naruto/images/3/38/Kakashi_Hatake.png" alt="Kakashi Hatake" />
+          <h3>Kakashi Hatake</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2026 Naruto Fan Universe. Not Official.</p>
+    <p>&copy; 2026 Shinobi Realm (Fan Project)</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
