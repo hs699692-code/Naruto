@@ -1,10 +1,13 @@
-// Add any interactive/animated effects beyond CSS here
-
-// Example: Chakra sound effect or more fancy chakra pulsating, etc.
-// For now, just a small form alert:
-
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert("Message sent, young ninja! The Hokage will answer your secret message soon!");
-    this.reset();
+// Animate shuriken float entrance
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.anime-char-card').forEach((el, idx) => {
+    el.style.opacity = 0;
+    setTimeout(() => {
+      el.style.opacity = 1;
+      el.style.transform = 'scale(1.07) translateY(-9px)';
+      setTimeout(() => {
+        el.style.transform = '';
+      }, 300);
+    }, 400 + idx * 190);
+  });
 });
