@@ -1,0 +1,165 @@
+/* Reset & base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Bangers', cursive, sans-serif;
+  background: linear-gradient(135deg, #ff9800 0%, #1565c0 100%);
+  overflow-x: hidden;
+}
+.konoha-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/9/94/Leaf_village_logo.svg') center center repeat;
+  opacity: 0.045;
+  background-size: 350px 350px;
+  pointer-events: none;
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  z-index: 1;
+  overflow: visible;
+}
+.chakra-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  box-shadow: 0 0 60px 40px #00e5ff55, 0 0 90px 60px #00e5ff22;
+  z-index: 0;
+  animation: chakraPulsate 2s infinite alternate;
+}
+@keyframes chakraPulsate {
+  from { box-shadow: 0 0 60px 40px #00e5ff55, 0 0 90px 60px #00e5ff22;}
+  to   { box-shadow: 0 0 90px 55px #00ffea88, 0 0 120px 88px #00b9ff44;}
+}
+.hero-img.ninja-scroll {
+  margin-top: 2rem;
+  width: 190px;
+  filter: drop-shadow(0 7px 28px #2226);
+  z-index: 1;
+  animation: scrollFloat 2.2s infinite alternate ease-in-out;
+}
+@keyframes scrollFloat {
+  from { transform: translateY(0);}
+  to   { transform: translateY(-20px);}
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5em;
+}
+.naruto-title {
+  font-family: 'Bangers', cursive, sans-serif;
+  font-size: 3.3rem;
+  color: #ff9800;
+  text-shadow: 2px 5px 10px #1119, 0 1px 10px #fff5;
+  margin: 0.3em 0 0.1em 0;
+  letter-spacing: .06em;
+}
+.naruto-tagline {
+  color: #222;
+  background: #fff9;
+  padding: 0.7em 1.2em;
+  border-radius: 16px;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 auto 2em auto;
+}
+.shuriken {
+  width: 50px;
+  height: 50px;
+  margin-top: 22px;
+  animation: spinShuriken 1.3s linear infinite;
+  filter: drop-shadow(0 0 6px #2226);
+  z-index: 2;
+}
+@keyframes spinShuriken {
+  from { transform: rotate(0deg);}
+  to   { transform: rotate(360deg);}
+}
+
+/* CONTACT PAGE */
+.contact-section {
+  background: rgba(255,255,255,0.91);
+  border-radius: 14px;
+  max-width: 420px;
+  margin: 2.5em auto 2.2em auto;
+  padding: 2em 2.2em;
+  box-shadow: 0 6px 45px #0005, 0 2px 18px #fff8;
+}
+.contact-section h2 {
+  font-family: 'Bangers', cursive, sans-serif;
+  color: #1565c0;
+  font-size: 2.3em;
+  margin: 0 0 0.7em;
+  text-align: center;
+}
+.contact-section label {
+  display: block;
+  margin: 1em 0 0.4em 0;
+  font-weight: bold;
+  color: #1a1a1a;
+  letter-spacing: 0.03em;
+}
+.contact-section input, .contact-section textarea {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  margin-bottom: 1em;
+  background: #f5f5f5;
+  font-family: inherit;
+}
+.contact-section button {
+  width: 100%;
+  padding: 0.8em;
+  background: linear-gradient(90deg, #ff9800 20%, #1565c0 90%);
+  color: white;
+  font-family: 'Bangers', cursive, sans-serif;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background .24s;
+}
+.contact-section button:hover {
+  background: linear-gradient(90deg, #1565c0 20%, #ff9800 90%);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #fff;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.1rem;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .naruto-title { font-size: 2.1rem;}
+  .hero-section { min-height: 40vh; }
+  .chakra-glow { width: 160px; height: 160px; }
+  .hero-img.ninja-scroll { width: 110px;}
+  .contact-section { max-width: 96vw; padding: 1.2em 0.6em; }
+}
+@media (max-width: 480px) {
+  .naruto-tagline { font-size: 1em; }
+  .contact-section h2 { font-size:1.4em;}
+}
+
+/* Details: Everything can be customized! */
