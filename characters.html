@@ -3,248 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Naruto Shinobi Gallery</title>
+  <title>Main Naruto Characters</title>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <style>
-  body {
-    background: linear-gradient(120deg, #181c2f 0%, #222b46 80%);
-  }
-  .shinobi-gallery-title {
-    font-family: 'Bangers', cursive, sans-serif;
-    color: #89fff7;
-    font-size: 2.3em;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: 2.7rem 0 0.6rem 0;
-    text-shadow: 0 2px 38px #0ff6f8aa;
-  }
-  .shinobi-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.1em;
-    justify-content: center;
-    margin: 2em auto 3em auto;
-    max-width: 1200px;
-  }
-  /* Shinobi Card Anime */
-  .shinobi-card {
-    background: linear-gradient(135deg,#232b46 20%,#10f1fd86 95%);
-    border-radius: 21px;
-    box-shadow: 0 11px 48px #0afffd66;
-    width: 200px;
-    padding: 1.4em 1em 0.8em 1em;
-    display: flex; flex-direction: column; align-items: center;
-    margin-bottom: 1em;
-    opacity: 0;
-    transform: scale(.85) translateY(60px);
-    transition: opacity .7s,transform .7s;
-    position: relative;
-    border: 2.5px solid #38eafcbb;
-    animation: fadeUpAnime .65s both;
-  }
-  @keyframes fadeUpAnime {
-    from { opacity:0; transform: scale(.85) translateY(44px);}
-    to { opacity:0.96; transform: scale(1) translateY(0);}
-  }
-  .shinobi-card.visible {
-    opacity: 0.96;
-    transform: scale(1) translateY(0);
-    transition: opacity .7s,transform .7s;
-  }
-  .shinobi-card:hover {
-    transform: scale(1.07) translateY(-8px) rotate(-2deg);
-    box-shadow: 0 18px 64px #51ffffcc;
-    border-color: #78fff7;
-    z-index:2;
-  }
-  .shinobi-card img {
-    width: 104px; height: 104px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #84f6fd;
-    box-shadow: 0 4px 37px #13f2f882;
-    background: #2a3241;
-    margin-bottom: 1.1em;
-    transition: box-shadow .25s, border-color .14s;
-    background-color: #222b46;
-  }
-  .shinobi-card:hover img {
-    border-color: #fff78c;
-    box-shadow: 0 8px 50px #fff38c66;
-  }
-  .shinobi-card h3 {
-    margin: .35em 0 0 0;
-    font-size: 1.11em;
-    font-family: 'Bangers', cursive, sans-serif;
-    color: #2df6f4;
-    text-shadow: 0 2px 14px #13f6e2;
-  }
-  .shinobi-card span {
-    font-size: .85em;
-    color: #d0efff;
-    margin: .23em 0 .25em 0;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    opacity: .87;
-    display: block;
-  }
-  @media(max-width:900px){.shinobi-grid{gap:1em;}}
-  @media(max-width:600px){.shinobi-card{width:90vw;}}
+    body {
+      background: linear-gradient(120deg, #181c2f 0%, #222b46 80%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #e7ecfa;
+    }
+    .main-nav {
+      background: #232b46;
+      color: #fff;
+      padding: 0 1.3em;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Bangers', cursive;
+      box-shadow: 0 2px 18px #0deaf483;
+    }
+    .site-name {
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      color: #7bf7ff;
+      text-shadow: 0 2px 18px #39f5e6;
+    }
+    .main-nav ul {
+      list-style: none; display: flex; gap: 1em; margin: 0; padding: 0;
+    }
+    .main-nav a {
+      color: #dbefff;
+      text-decoration: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.02em;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 7px 18px 8px 18px;
+      background: none;
+      transition: background .12s, color .18s, box-shadow .13s;
+      box-shadow: 0 0 transparent;
+    }
+    .main-nav a.active, .main-nav a:hover {
+      background: linear-gradient(90deg, #18379f 30%, #29d8f9 100%);
+      color: #11143a;
+      box-shadow: 0 2px 16px #44e3ee60;
+    }
+    .characters-section-title {
+      font-family: 'Bangers', cursive;
+      color: #7bf7ff;
+      font-size: 2.2em;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 22px #79fff7a0;
+      text-align: center;
+      margin: 2em 0 1em 0;
+    }
+    .char-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2em;
+      justify-content: center;
+      margin-bottom: 3em;
+    }
+    .char-card {
+      background: linear-gradient(120deg, #222b46 50%, #18e2fa60 110%);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #15f1ff83;
+      width: 210px;
+      padding: 1.2em 1em 0.8em 1em;
+      display: flex; flex-direction: column; align-items: center;
+      margin-bottom: 1em;
+      border: 2.5px solid #78fff7;
+      transition: transform .16s, box-shadow .11s, border-color .14s;
+    }
+    .char-card:hover {
+      transform: scale(1.06) translateY(-7px) rotate(-2deg);
+      box-shadow: 0 17px 46px #23ffe2ab;
+      border-color: #fff78c;
+      z-index:2;
+    }
+    .char-card img {
+      width: 110px; height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #84f6fd;
+      box-shadow: 0 4px 23px #13f2f882;
+      margin-bottom: 1em;
+    }
+    .char-card h3 {
+      margin: .4em 0 .19em 0;
+      font-size: 1.22em;
+      font-family: 'Bangers', cursive;
+      color: #faff59;
+      text-shadow: 0 1px 13px #1bbaf9;
+      background: #312e2eaa;
+      padding: 2px 16px;
+      border-radius: 8px;
+      letter-spacing: 1px;
+    }
+    .char-card span {
+      font-size: .97em;
+      color: #d0efff;
+      margin: .19em 0 .23em 0;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      display: block;
+    }
+    @media(max-width:900px){.char-grid{gap:1em;}.char-card{width:170px;}}
+    @media(max-width:600px){.char-card{width:92vw;}}
   </style>
 </head>
 <body>
-  <nav class="main-nav">
-    <span class="site-name">Naruto Portal</span>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="characters.html" class="active">Characters</a></li>
-      <li><a href="episodes.html">Episodes</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <h1 class="shinobi-gallery-title">Legendary Naruto Shinobi (HD)</h1>
-  <section>
-    <div class="shinobi-grid">
-      <!-- 1 Naruto Uzumaki -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Naruto_Uzumaki_Part_II_Anime.png" alt="Naruto Uzumaki">
-        <h3>Naruto Uzumaki</h3>
-        <span>Hokage | Konoha | Shadow Clone, Rasengan, Kurama</span>
-      </div>
-      <!-- 2 Sasuke Uchiha -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/c/c3/Sasuke_Uchiha_Part_II_Anime.png" alt="Sasuke Uchiha">
-        <h3>Sasuke Uchiha</h3>
-        <span>Sharingan | Rinnegan | Chidori, Katana</span>
-      </div>
-      <!-- 3 Sakura Haruno -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/9/99/Sakura_Part_II_Anime.png" alt="Sakura Haruno">
-        <h3>Sakura Haruno</h3>
-        <span>Medical Ninja | Super Strength | Team 7</span>
-      </div>
-      <!-- 4 Kakashi Hatake -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/d/d0/Kakashi_Hatake_Part_II_Anime.png" alt="Kakashi Hatake">
-        <h3>Kakashi Hatake</h3>
-        <span>Copy Ninja | Sharingan | Raikiri</span>
-      </div>
-      <!-- 5 Hinata Hyuga -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/3/36/Hinata_Hyuga_Part_II_Anime.png" alt="Hinata Hyuga">
-        <h3>Hinata Hyuga</h3>
-        <span>Byakugan | Gentle Fist | Hyuga Clan</span>
-      </div>
-      <!-- 6 Gaara -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/6/67/Gaara_Part_II_Anime.png" alt="Gaara">
-        <h3>Gaara</h3>
-        <span>Kazekage | Sand Jutsu | Shukaku</span>
-      </div>
-      <!-- 7 Jiraiya -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Jiraiya_Anime.png" alt="Jiraiya">
-        <h3>Jiraiya</h3>
-        <span>Legendary Sannin | Toad Sage | Rasengan</span>
-      </div>
-      <!-- 8 Itachi Uchiha -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/a/ac/Itachi_Uchiha_Anime.png" alt="Itachi Uchiha">
-        <h3>Itachi Uchiha</h3>
-        <span>Akatsuki | Mangekyō Sharingan</span>
-      </div>
-      <!-- 9 Madara Uchiha -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/d/d7/Madara_Uchiha_Anime.png" alt="Madara Uchiha">
-        <h3>Madara Uchiha</h3>
-        <span>Legend | Akatsuki | Infinite Tsukuyomi</span>
-      </div>
-      <!-- 10 Minato Namikaze -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/3/39/Minato_Anime.png" alt="Minato Namikaze">
-        <h3>Minato Namikaze</h3>
-        <span>Fourth Hokage | Flying Thunder God</span>
-      </div>
-      <!-- 11 Orochimaru -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/4/4b/Orochimaru_Anime.png" alt="Orochimaru">
-        <h3>Orochimaru</h3>
-        <span>Legendary Sannin | Snake Jutsu</span>
-      </div>
-      <!-- 12 Killer Bee -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/1/13/Killer_Bee_Anime.png" alt="Killer Bee">
-        <h3>Killer Bee</h3>
-        <span>Eight-Tails | Rap Ninja | Lariat</span>
-      </div>
-      <!-- 13 Obito Uchiha -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/1/1b/Obito_Uchiha_Anime.png" alt="Obito Uchiha">
-        <h3>Obito Uchiha</h3>
-        <span>Tobi | Akatsuki | Masked Man</span>
-      </div>
-      <!-- 14 Tsunade Senju -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/a/ae/Tsunade_Anime.png" alt="Tsunade Senju">
-        <h3>Tsunade Senju</h3>
-        <span>Fifth Hokage | Legendary Sannin</span>
-      </div>
-      <!-- 15 Neji Hyuga -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/c/c2/Neji_Hyuga_Anime.png" alt="Neji Hyuga">
-        <h3>Neji Hyuga</h3>
-        <span>Byakugan | Hyuga Clan | Destiny</span>
-      </div>
-      <!-- 16 Might Guy -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/0/0f/Might_Guy_Anime.png" alt="Might Guy">
-        <h3>Might Guy</h3>
-        <span>Taijutsu God | Blue Beast</span>
-      </div>
-      <!-- 17 Konan -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/4/41/Konan_Anime.png" alt="Konan">
-        <h3>Konan</h3>
-        <span>Akatsuki | Paper Angel</span>
-      </div>
-      <!-- 18 Pain (Nagato) -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/5/53/Pain_Anime.png" alt="Pain Nagato">
-        <h3>Pain (Nagato)</h3>
-        <span>Akatsuki | Rinnegan | Six Paths</span>
-      </div>
-      <!-- 19 Shikamaru Nara -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Shikamaru_Nara_Anime.png" alt="Shikamaru Nara">
-        <h3>Shikamaru Nara</h3>
-        <span>Shadow Possession | Strategy Master</span>
-      </div>
-      <!-- 20 Rock Lee -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/b/b4/Rock_Lee_Anime.png" alt="Rock Lee">
-        <h3>Rock Lee</h3>
-        <span>Taijutsu | 8 Gates | Green Beast</span>
-      </div>
-      <!-- 21 Kaguya Otsutsuki -->
-      <div class="shinobi-card">
-        <img src="https://static.wikia.nocookie.net/naruto/images/6/6f/Kaguya_Anime.png" alt="Kaguya Otsutsuki">
-        <h3>Kaguya Otsutsuki</h3>
-        <span>Progenitor | Rabbit Goddess</span>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div>Fanmade. &copy; 2026 | Dattebayo!</div>
-  </footer>
-  <script>
-    // Fade-in animation for cards on load
-    window.addEventListener('DOMContentLoaded',()=>{
-      document.querySelectorAll('.shinobi-card').forEach((c,i)=>{
-        setTimeout(()=>c.classList.add('visible'),260 + i*120);
-      });
-    });
-  </script>
+<nav class="main-nav">
+  <span class="site-name">Naruto Portal</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="characters.html" class="active">Characters</a></li>
+    <li><a href="episodes.html">Episodes</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<h1 class="characters-section-title">Main Naruto Characters</h1>
+<section>
+<div class="char-grid">
+  <!-- Naruto -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Naruto_Uzumaki_Part_II_Anime.png" alt="Naruto Uzumaki">
+    <h3>Naruto Uzumaki</h3>
+    <span>Hokage | Shadow Clone | Kurama</span>
+  </div>
+  <!-- Sasuke -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/c/c3/Sasuke_Uchiha_Part_II_Anime.png" alt="Sasuke Uchiha">
+    <h3>Sasuke Uchiha</h3>
+    <span>Sharingan | Rinnegan | Chidori</span>
+  </div>
+  <!-- Sakura -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/9/99/Sakura_Part_II_Anime.png" alt="Sakura Haruno">
+    <h3>Sakura Haruno</h3>
+    <span>Medical Ninja | Super Strength</span>
+  </div>
+  <!-- Kakashi -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/d/d0/Kakashi_Hatake_Part_II_Anime.png" alt="Kakashi Hatake">
+    <h3>Kakashi Hatake</h3>
+    <span>Copy Ninja | Raikiri | Sharingan</span>
+  </div>
+  <!-- Hinata -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/3/36/Hinata_Hyuga_Part_II_Anime.png" alt="Hinata Hyuga">
+    <h3>Hinata Hyuga</h3>
+    <span>Byakugan | Gentle Fist</span>
+  </div>
+  <!-- Gaara -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/6/67/Gaara_Part_II_Anime.png" alt="Gaara">
+    <h3>Gaara</h3>
+    <span>Kazekage | Sand Jutsu</span>
+  </div>
+  <!-- Shikamaru -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Shikamaru_Nara_Anime.png" alt="Shikamaru Nara">
+    <h3>Shikamaru Nara</h3>
+    <span>Shadow Possession | Strategist</span>
+  </div>
+  <!-- Rock Lee -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/b/b4/Rock_Lee_Anime.png" alt="Rock Lee">
+    <h3>Rock Lee</h3>
+    <span>Taijutsu | Green Beast</span>
+  </div>
+</div>
+</section>
+<footer>
+  <div>Fanmade. &copy; 2026</div>
+</footer>
 </body>
 </html>
