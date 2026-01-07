@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Naruto Shinobi Realm</title>
+  <meta name="theme-color" content="#191a32"/>
+  <title>Naruto Anime Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVBAR WITH GLOWING LOGO -->
+  <!-- NAVBAR -->
   <nav class="main-nav">
     <div class="logo-wrap">
       <div class="chakra-glow"></div>
       <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Leaf_village_logo.svg" alt="Konoha" />
-      <span class="site-name">Shinobi Realm</span>
+      <span class="site-name animewave">Naruto Portal</span>
     </div>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -24,46 +25,93 @@
     </ul>
   </nav>
 
-  <!-- PARALLAX HERO WITH CHAKRA AND ANIMATED SHURIKEN -->
+  <!-- HERO: PARALLAX, KONOHA GLOW, CHAKRA ANIMATION, SHURIKEN FLOATS -->
   <header class="hero-section">
-    <div class="parallax-bg"></div>
-    <div class="hero-content">
-      <h1 class="title">The Ultimate Naruto Shinobi Portal</h1>
-      <p class="tagline">
-        Enter the world of chakra, shinobi legends, and stunning ninja visuals.
-      </p>
-      <a class="chakra-btn" href="characters.html">Meet the Shinobi</a>
+    <div class="hero-bg-parallax"></div>
+    <div class="hero-inner">
+      <h1 class="main-anime-title"><span>Welcome to</span><br/> Hidden Leaf Shinobi World</h1>
+      <div class="hero-vibe-row">
+        <span class="chakra-glow-massive"></span>
+        <img class="hero-konoha-big" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Leaf_village_logo.svg" alt="Konoha Big" />
+        <img class="float-shuriken shuriken1" src="https://pngimg.com/d/shuriken_PNG29.png" alt="Shuriken" />
+        <img class="float-shuriken shuriken2" src="https://pngimg.com/d/shuriken_PNG29.png" alt="Shuriken" />
+      </div>
+      <p class="hero-catch">🔥 The portal for every Naruto fanatic! Explore characters, battles, quizzes, arts & more.<br><span class="chakra-pulse-text">Unleash your chakra, find your ninja way!</span></p>
+      <a class="anime-btn-cta" href="characters.html">Start Your Ninja Journey!</a>
     </div>
-    <img src="https://pngimg.com/d/shuriken_PNG29.png" class="shuriken" alt="Spinning Shuriken" />
+    <svg class="hero-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 190">
+      <path fill="#191a32" fill-opacity="1" d="M0,120L48,122.7C96,125,192,131,288,133.3C384,136,480,136,576,128C672,120,768,104,864,117.3C960,131,1056,173,1152,181.3C1248,189,1344,163,1392,149.3L1440,136L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
   </header>
 
-  <main>
-    <!-- CHARACTER PREVIEW CARDS: FADE/ZOOM ON LOAD -->
-    <section class="character-preview">
-      <h2>Main Characters</h2>
-      <div class="char-grid">
-        <div class="char-card">
-          <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Naruto_Uzumaki_part_II.png" alt="Naruto Uzumaki" />
+  <!-- CHARACTERS WITH ANIME GLOW CARDS -->
+  <section class="anime-section dark">
+    <h2 class="anime-section-title">👥 Legendary Shinobi</h2>
+    <div class="anime-card-grid">
+      <div class="anime-char-card">
+        <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Naruto_Uzumaki_part_II.png" alt="Naruto">
+        <div>
           <h3>Naruto Uzumaki</h3>
-        </div>
-        <div class="char-card">
-          <img src="https://static.wikia.nocookie.net/naruto/images/7/79/Sasuke_Uchiha_Part_II.png" alt="Sasuke Uchiha" />
-          <h3>Sasuke Uchiha</h3>
-        </div>
-        <div class="char-card">
-          <img src="https://static.wikia.nocookie.net/naruto/images/9/99/Sakura_Part_II.png" alt="Sakura Haruno" />
-          <h3>Sakura Haruno</h3>
-        </div>
-        <div class="char-card">
-          <img src="https://static.wikia.nocookie.net/naruto/images/3/38/Kakashi_Hatake.png" alt="Kakashi Hatake" />
-          <h3>Kakashi Hatake</h3>
+          <span class="char-tag">The Boy Who Won't Quit</span>
+          <p class="char-bio">Lives to turn enemies into friends. Clone jutsu and ramen king!</p>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="anime-char-card">
+        <img src="https://static.wikia.nocookie.net/naruto/images/7/79/Sasuke_Uchiha_Part_II.png" alt="Sasuke">
+        <div>
+          <h3>Sasuke Uchiha</h3>
+          <span class="char-tag dark">The Lone Avenger</span>
+          <p class="char-bio">Shadow, Sharingan, attitude. On a mission for power and redemption.</p>
+        </div>
+      </div>
+      <div class="anime-char-card">
+        <img src="https://static.wikia.nocookie.net/naruto/images/9/99/Sakura_Part_II.png" alt="Sakura">
+        <div>
+          <h3>Sakura Haruno</h3>
+          <span class="char-tag sakura">Punch Like a Tank</span>
+          <p class="char-bio">Medic Genjutsu pro. Brains, brawn, and a temper! 💥</p>
+        </div>
+      </div>
+      <div class="anime-char-card">
+        <img src="https://static.wikia.nocookie.net/naruto/images/3/38/Kakashi_Hatake.png" alt="Kakashi">
+        <div>
+          <h3>Kakashi Hatake</h3>
+          <span class="char-tag kakashi">Copy Ninja</span>
+          <p class="char-bio">Cooler than your sensei. Masked, mysterious, bookworm!</p>
+        </div>
+      </div>
+    </div>
+    <svg class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#22234a" fill-opacity="1" d="M0,16L48,26.7C96,37,192,59,288,74.7C384,91,480,101,576,96C672,91,768,69,864,64C960,59,1056,69,1152,85.3C1248,101,1344,123,1392,133.3L1440,144L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  </section>
+
+  <!-- FUN ZONE -->
+  <section class="anime-section light funzone">
+    <h2 class="anime-section-title">🎉 Ninja Fun Zone</h2>
+    <div class="funzone-row">
+      <div class="fun-card">
+        <span class="fun-emoji">🎲</span>
+        <h3>Ninja Quiz</h3>
+        <p>Find your ninja style – Are you a Hokage or Akatsuki?</p>
+        <a href="quiz.html" class="mini-btn">Start Quiz</a>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">🖌️</span>
+        <h3>Fan Art Gallery</h3>
+        <p>Wallpapers and artwork from the real fan legends!</p>
+        <a href="gallery.html" class="mini-btn">See Art</a>
+      </div>
+      <div class="fun-card">
+        <span class="fun-emoji">⚡</span>
+        <h3>Jutsu Generator</h3>
+        <p>Get a random jutsu and chakra power-up moment.</p>
+        <a href="#" class="mini-btn">Channel Chakra</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Shinobi Realm (Fan Project)</p>
+    <div>Fanmade. &copy; 2026 | Dattebayo!</div>
+    <div style="font-size: .85em; color: #aaa;">Not affiliated with official Naruto. Made with ❤️ for all shinobi!</div>
   </footer>
   <script src="script.js"></script>
 </body>
