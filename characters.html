@@ -1,72 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naruto Portal | Characters</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/theme.css">
-<link rel="stylesheet" href="css/animations.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Main Naruto Characters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #181c2f 0%, #222b46 80%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #e7ecfa;
+    }
+    .main-nav {
+      background: #232b46;
+      color: #fff;
+      padding: 0 1.3em;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Bangers', cursive;
+      box-shadow: 0 2px 18px #0deaf483;
+    }
+    .site-name {
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      color: #7bf7ff;
+      text-shadow: 0 2px 18px #39f5e6;
+    }
+    .main-nav ul {
+      list-style: none; display: flex; gap: 1em; margin: 0; padding: 0;
+    }
+    .main-nav a {
+      color: #dbefff;
+      text-decoration: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.02em;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 7px 18px 8px 18px;
+      background: none;
+      transition: background .12s, color .18s, box-shadow .13s;
+      box-shadow: 0 0 transparent;
+    }
+    .main-nav a.active, .main-nav a:hover {
+      background: linear-gradient(90deg, #18379f 30%, #29d8f9 100%);
+      color: #11143a;
+      box-shadow: 0 2px 16px #44e3ee60;
+    }
+    .characters-section-title {
+      font-family: 'Bangers', cursive;
+      color: #7bf7ff;
+      font-size: 2.2em;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 22px #79fff7a0;
+      text-align: center;
+      margin: 2em 0 1em 0;
+    }
+    .char-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2em;
+      justify-content: center;
+      margin-bottom: 3em;
+    }
+    .char-card {
+      background: linear-gradient(120deg, #222b46 50%, #18e2fa60 110%);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #15f1ff83;
+      width: 210px;
+      padding: 1.2em 1em 0.8em 1em;
+      display: flex; flex-direction: column; align-items: center;
+      margin-bottom: 1em;
+      border: 2.5px solid #78fff7;
+      transition: transform .16s, box-shadow .11s, border-color .14s;
+    }
+    .char-card:hover {
+      transform: scale(1.06) translateY(-7px) rotate(-2deg);
+      box-shadow: 0 17px 46px #23ffe2ab;
+      border-color: #fff78c;
+      z-index:2;
+    }
+    .char-card img {
+      width: 110px; height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #84f6fd;
+      box-shadow: 0 4px 23px #13f2f882;
+      margin-bottom: 1em;
+    }
+    .char-card h3 {
+      margin: .4em 0 .19em 0;
+      font-size: 1.22em;
+      font-family: 'Bangers', cursive;
+      color: #faff59;
+      text-shadow: 0 1px 13px #1bbaf9;
+      background: #312e2eaa;
+      padding: 2px 16px;
+      border-radius: 8px;
+      letter-spacing: 1px;
+    }
+    .char-card span {
+      font-size: .97em;
+      color: #d0efff;
+      margin: .19em 0 .23em 0;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      display: block;
+    }
+    @media(max-width:900px){.char-grid{gap:1em;}.char-card{width:170px;}}
+    @media(max-width:600px){.char-card{width:92vw;}}
+  </style>
 </head>
-
 <body>
-
 <nav class="main-nav">
   <span class="site-name">Naruto Portal</span>
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a class="active" href="characters.html">Characters</a></li>
+    <li><a href="characters.html" class="active">Characters</a></li>
     <li><a href="episodes.html">Episodes</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<h1 class="characters-title fade-up">Main Characters</h1>
-
+<h1 class="characters-section-title">Main Naruto Characters</h1>
+<section>
 <div class="char-grid">
-
-  <div class="char-card fade-up">
-    <img src="assets/images/characters/naruto.png" alt="Naruto Uzumaki">
+  <!-- Naruto -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Naruto_Uzumaki_Part_II_Anime.png" alt="Naruto Uzumaki">
     <h3>Naruto Uzumaki</h3>
-    <span>Sage Mode | Kurama | Hokage</span>
+    <span>Hokage | Shadow Clone | Kurama</span>
   </div>
-
-  <div class="char-card fade-up">
-    <img src="assets/images/characters/sasuke.png" alt="Sasuke Uchiha">
+  <!-- Sasuke -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/c/c3/Sasuke_Uchiha_Part_II_Anime.png" alt="Sasuke Uchiha">
     <h3>Sasuke Uchiha</h3>
-    <span>Rinnegan | Sharingan | Chidori</span>
+    <span>Sharingan | Rinnegan | Chidori</span>
   </div>
-
-  <div class="char-card fade-up">
-    <img src="assets/images/characters/itachi.png" alt="Itachi Uchiha">
-    <h3>Itachi Uchiha</h3>
-    <span>Mangekyo | Genjutsu | Akatsuki</span>
-  </div>
-
-  <div class="char-card fade-up">
-    <img src="assets/images/characters/kakashi.png" alt="Kakashi Hatake">
-    <h3>Kakashi Hatake</h3>
-    <span>Copy Ninja | Sharingan | Raikiri</span>
-  </div>
-
-  <div class="char-card fade-up">
-    <img src="assets/images/characters/minato.png" alt="Minato Namikaze">
-    <h3>Minato Namikaze</h3>
-    <span>Flying Raijin | 4th Hokage</span>
-  </div>
-
-  <div class="char-card fade-up">
-    <img src="assets/images/characters/sakura.png" alt="Sakura Haruno">
+  <!-- Sakura -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/9/99/Sakura_Part_II_Anime.png" alt="Sakura Haruno">
     <h3>Sakura Haruno</h3>
-    <span>Byakugo | Medical Ninja</span>
+    <span>Medical Ninja | Super Strength</span>
   </div>
-
+  <!-- Kakashi -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/d/d0/Kakashi_Hatake_Part_II_Anime.png" alt="Kakashi Hatake">
+    <h3>Kakashi Hatake</h3>
+    <span>Copy Ninja | Raikiri | Sharingan</span>
+  </div>
+  <!-- Hinata -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/3/36/Hinata_Hyuga_Part_II_Anime.png" alt="Hinata Hyuga">
+    <h3>Hinata Hyuga</h3>
+    <span>Byakugan | Gentle Fist</span>
+  </div>
+  <!-- Gaara -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/6/67/Gaara_Part_II_Anime.png" alt="Gaara">
+    <h3>Gaara</h3>
+    <span>Kazekage | Sand Jutsu</span>
+  </div>
+  <!-- Shikamaru -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/9/97/Shikamaru_Nara_Anime.png" alt="Shikamaru Nara">
+    <h3>Shikamaru Nara</h3>
+    <span>Shadow Possession | Strategist</span>
+  </div>
+  <!-- Rock Lee -->
+  <div class="char-card">
+    <img src="https://static.wikia.nocookie.net/naruto/images/b/b4/Rock_Lee_Anime.png" alt="Rock Lee">
+    <h3>Rock Lee</h3>
+    <span>Taijutsu | Green Beast</span>
+  </div>
 </div>
-
-<footer class="main-footer">
-  <span>Fanmade Naruto Portal © 2026</span>
+</section>
+<footer>
+  <div>Fanmade. &copy; 2026</div>
 </footer>
-
 </body>
 </html>
