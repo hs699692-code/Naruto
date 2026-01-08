@@ -1,63 +1,46 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Naruto Episodes & Movies</title>
-<style>
-/* Scoped styles only for this section — will not change the site's existing background */
-#episodes { background: transparent; color: inherit; padding: 1rem; }
-#episodes .grid { display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; }
-.figure { width: 260px; }
-.figure img { width:100%; height:auto; border-radius:6px; box-shadow: 0 2px 6px rgba(0,0,0,0.25); display:block; }
-.figure figcaption { margin-top:0.5rem; font-size:0.95rem; }
-.movie-list { margin-top:0.5rem; font-size:0.9rem; padding-left:1.1rem; }
-@media (max-width:600px){ .figure{ width:48%; } }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Naruto Episodes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- This section keeps the existing background unchanged -->
-<section id="episodes" aria-labelledby="episodes-heading">
-  <h1 id="episodes-heading">Episodes & Movies</h1>
-
-  <div class="grid">
-
-    <figure class="figure">
-      <img src="https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg" alt="Naruto (original) poster">
-      <figcaption><strong>Naruto (Original)</strong><br>TV series: Episodes 1–220</figcaption>
-      <ul class="movie-list">
-        <li>Naruto the Movie: Ninja Clash in the Land of Snow (2004)</li>
-        <li>Naruto the Movie: Legend of the Stone of Gelel (2005)</li>
-        <li>Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006)</li>
-      </ul>
-    </figure>
-
-    <figure class="figure">
-      <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Naruto_Shippuden_volume_1_cover.jpg" alt="Naruto Shippuden poster">
-      <figcaption><strong>Naruto Shippuden</strong><br>TV series: Episodes 1–500</figcaption>
-      <ul class="movie-list">
-        <li>Naruto Shippuden the Movie (2007)</li>
-        <li>Naruto Shippuden 2: Bonds (2008)</li>
-        <li>Naruto Shippuden 3: The Will of Fire (2009)</li>
-        <li>Naruto Shippuden 4: The Lost Tower (2010)</li>
-        <li>Naruto Shippuden 5: Blood Prison (2011)</li>
-        <li>Naruto Shippuden 6: Road to Ninja (2012)</li>
-        <li>The Last: Naruto the Movie (2014)</li>
-      </ul>
-    </figure>
-
-    <figure class="figure">
-      <img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Boruto_manga_volume_1.jpg" alt="Boruto poster">
-      <figcaption><strong>Boruto: Naruto Next Generations</strong><br>TV series (started 2017)</figcaption>
-      <ul class="movie-list">
-        <li>Boruto: Naruto the Movie (2015)</li>
-      </ul>
-    </figure>
-
-  </div>
-
-  <p style="margin-top:1rem; font-size:0.92rem;">
-    Notes: Images are linked from Wikimedia Commons. If you want local copies added to the repository (e.g., /assets/images/) and the file updated to use local images, tell me and I will commit those files without changing the background.
-  </p>
-</section>
+  <nav class="main-nav">
+    <div class="logo">
+      <img src="https://seeklogo.com/images/N/naruto-logo-7F8B35B18B-seeklogo.com.png" alt="Naruto Logo" />
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="characters.html">Characters</a></li>
+      <li><a href="episodes.html" class="active">Episodes</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <h1 class="page-title">Episodes / Manga Guide</h1>
+    <div class="episodes-list">
+      <div class="episode-card">
+        <h3>Episode 1: Enter Naruto Uzumaki!</h3>
+        <p>Naruto ki journey start hoti hai! Kya hoga aage?</p>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 133: A Plea from a Friend</h3>
+        <p>Naruto vs Sasuke legendary fight. Heart-touching moments!</p>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 329: Two-Man Team</h3>
+        <p>Kurama aur Naruto ka bonding moment—Chakra mode unleashed!</p>
+      </div>
+      <!-- More episode summaries or manga chapters as you want -->
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 Naruto Fan Universe.</p>
+  </footer>
 </body>
 </html>
