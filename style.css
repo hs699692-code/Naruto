@@ -173,16 +173,26 @@ body {
   box-shadow: 0 10px 62px #1effc9d3;
   z-index: 2;
 }
+
+/* ====== PHOTO LAYOUT UPGRADE (DECENT) ====== */
 .anime-char-card img {
-  width: 90px; height: 90px;
-  object-fit:cover;
-  border-radius: 50%;
-  border: 3px solid #72fff8b7;
-  box-shadow: 0 2px 17px #1bbbf999;
-  background: #223661;
-  margin-bottom: 0.9em;
-  transition:box-shadow .25s;
+  width: 108px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1.6px solid rgba(120,255,248,0.55);
+  background: #1e253b;
+  image-rendering: -webkit-optimize-contrast;
+  box-shadow: 0 4px 18px rgba(0,255,245,0.28);
+  margin-bottom: 0.75em;
+  transition: transform .18s, box-shadow .18s;
 }
+.anime-char-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 28px rgba(0,255,245,0.45);
+}
+/* ============================================ */
+
 .anime-char-card h3 { margin:0.15em 0 0.2em 0; font-size: 1.04em; color: #2deef7;
   font-family: 'Bangers', cursive; text-shadow: 0 4px 18px #1bbaf961;}
 .char-tag { border-radius:15px; font-size:0.83em; padding:2px 20px;color:#222;background: #65fffceb;}
