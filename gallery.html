@@ -1,40 +1,27 @@
+<!--
+This is a fragment you can include where you want the gallery to appear (e.g., in your gallery page).
+Place it into your Naruto-page HTML (for example inside <main>).
+Make sure to include gallery.css and gallery.js as shown below.
+-->
+<section id="gallery-section" class="np-gallery-section">
+  <h2 class="gallery-title">Gallery</h2>
 
+  <!-- The gallery container will be filled by gallery.js -->
+  <div id="gallery" class="gallery-grid" aria-live="polite"></div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Naruto Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <nav class="main-nav">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/hs699692-code/image/main/bannner.png.png
-" alt="Naruto Logo" />
+  <!-- Modal / Lightbox -->
+  <div id="gallery-modal" class="gallery-modal" aria-hidden="true">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <button class="modal-prev" id="modal-prev" aria-label="Previous">&#10094;</button>
+    <div class="modal-body">
+      <img id="modal-image" src="" alt="">
+      <div id="modal-caption" class="modal-caption"></div>
     </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="characters.html">Characters</a></li>
-      <li><a href="episodes.html">Episodes</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <main class="container">
-    <h1 class="page-title">Gallery (Wallpapers & Fan Art)</h1>
-    <div class="gallery-grid">
-      <img src="https://github.com/hs699692-code/image/blob/4e11d51e3299d56b22380c5f22a72235d45392a4/bannner.png.png" alt="bannner.png.png"  />
-      
+    <button class="modal-next" id="modal-next" aria-label="Next">&#10095;</button>
+  </div>
+</section>
 
-      
-      <!-- Add more fan art/wallpapers as you like! -->
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2026 Naruto Fan Universe.</p>
-  </footer>
-</body>
-</html>
+<!-- Add these in your page head/body:
+<link rel="stylesheet" href="css/gallery.css">
+<script defer src="js/gallery.js"></script>
+-->
