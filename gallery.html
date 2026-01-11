@@ -1,43 +1,139 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Naruto Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naruto Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #181c2f 0%, #222b46 80%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #e7ecfa;
+  }
+
+  .main-nav {
+    background: #232b46;
+    color: #fff;
+    padding: 0 1.3em;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Bangers', cursive;
+    box-shadow: 0 2px 18px #0deaf483;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav a {
+    color: #dbefff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px 18px;
+    border-radius: 8px;
+  }
+
+  .main-nav a.active, .main-nav a:hover {
+    background: linear-gradient(90deg, #18379f 30%, #29d8f9 100%);
+    color: #11143a;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2em auto;
+  }
+
+  .page-title {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: #7bf7ff;
+    text-shadow: 0 2px 22px #79fff7a0;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid #78fff7;
+    box-shadow: 0 6px 20px #15f1ff83;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px #44e3ee80;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #232b46;
+    color: #dbefff;
+    margin-top: 2em;
+  }
+</style>
 </head>
 <body>
-  <nav class="main-nav">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/hs699692-code/image/main/bannner.png.png
-" alt="Naruto Logo" />
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="characters.html">Characters</a></li>
-      <li><a href="episodes.html">Episodes</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <main class="container">
-    <h1 class="page-title">Gallery (Wallpapers & Fan Art)</h1>
-    <div class="gallery-grid">
-      <img src="https://github.com/hs699692-code/image/blob/4e11d51e3299d56b22380c5f22a72235d45392a4/bannner.png.png" alt="bannner.png.png"  />
-       <img src="https://github.com/hs699692-code/image/blob/088c32dfb304c35ab37dca90881c628a.jpg" alt="photo 1"  />
-         <img src="https://github.com/hs699692-code/image/blob/199a8e98b229ede1945a192e012cbcc6.jpg" alt="photo 2"  />
-      <img src="https://github.com/hs699692-code/image/blob/1b53a4d0f4e174c6cab608a2a334a419.jpg" alt="photo 3"  />
-       <img src="https://github.com/hs699692-code/image/blob/387c19069dbc4ab99958c61b7e588360.jpg" alt="photo 4"  />
 
-      
-      <!-- Add more fan art/wallpapers as you like! -->
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2026 Naruto Fan Universe.</p>
-  </footer>
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="characters.html">Characters</a></li>
+    <li><a href="episodes.html">Episodes</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <h1 class="page-title">Gallery (Wallpapers & Fan Art)</h1>
+
+  <div class="gallery-grid">
+    <!-- 20 Character Image Slots -->
+    <img src="YOUR_IMAGE_LINK_1" alt="Character 1">
+    <img src="YOUR_IMAGE_LINK_2" alt="Character 2">
+    <img src="YOUR_IMAGE_LINK_3" alt="Character 3">
+    <img src="YOUR_IMAGE_LINK_4" alt="Character 4">
+    <img src="YOUR_IMAGE_LINK_5" alt="Character 5">
+    <img src="YOUR_IMAGE_LINK_6" alt="Character 6">
+    <img src="YOUR_IMAGE_LINK_7" alt="Character 7">
+    <img src="YOUR_IMAGE_LINK_8" alt="Character 8">
+    <img src="YOUR_IMAGE_LINK_9" alt="Character 9">
+    <img src="YOUR_IMAGE_LINK_10" alt="Character 10">
+    <img src="YOUR_IMAGE_LINK_11" alt="Character 11">
+    <img src="YOUR_IMAGE_LINK_12" alt="Character 12">
+    <img src="YOUR_IMAGE_LINK_13" alt="Character 13">
+    <img src="YOUR_IMAGE_LINK_14" alt="Character 14">
+    <img src="YOUR_IMAGE_LINK_15" alt="Character 15">
+    <img src="YOUR_IMAGE_LINK_16" alt="Character 16">
+    <img src="YOUR_IMAGE_LINK_17" alt="Character 17">
+    <img src="YOUR_IMAGE_LINK_18" alt="Character 18">
+    <img src="YOUR_IMAGE_LINK_19" alt="Character 19">
+    <img src="YOUR_IMAGE_LINK_20" alt="Character 20">
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Naruto Fan Universe.</p>
+</footer>
+
 </body>
 </html>
